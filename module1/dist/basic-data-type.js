@@ -40,7 +40,11 @@ const poorUser = {
     },
 };
 const num = [1, 2, 3, 4, 5];
-const newNum = num.map(element => element * element);
-console.log(newNum);
-
-
+const newNum = num.map((element) => element * element);
+const student = {
+    name: 'mim',
+    age: 10,
+    class: 'faltu class',
+    gender: 'female'
+};
+console.log(student);
