@@ -21,7 +21,42 @@ const bb = add(5) as number
 
 // interface
 
+type User1 = {
+    name:string;
+    phone:number;
+}
 
+
+type User3 = User1 & { gender?: string };
+interface User2 {
+  name: string;
+  phone: number;
+}
+
+interface User4 extends User2 {
+    gender:string
+}
+
+const user1 :User1 ={
+    name:"Safin",
+    phone:3343434,
+}
+
+const user2 :User2 ={
+    name:"Safin",
+    phone:3343434,
+}
+const user3 :User3 ={
+    name:"Safin",
+    phone:3343434,
+
+}
+const user4 :User4 ={
+    name:"Safin",
+    phone:3343434,
+    gender:'male'
+
+}
 
 
 
