@@ -120,6 +120,11 @@ console.log(search(xp, "name"));
 
 
 
+// basic promise
+
+
+
+
 
 
 

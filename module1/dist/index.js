@@ -1,3 +1,5 @@
-"use strict";
-let alu = 'hello would';
-console.log(alu);
+// "use strict";
+// let alu = 'hello would';
+// console.log(alu);
+
+
