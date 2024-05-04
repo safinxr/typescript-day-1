@@ -71,6 +71,20 @@
   ]
 
 
+// genetic type function
+
+const hudai =<T> (param:T):T[] =>{
+  return [param]
+}
+
+
+const rabbit = hudai<number>(34)
+
+
+const lala = <T, X>(param1:T, param2:X):[T, X] =>{
+  return [param1, param2]
+}
+
 
 
 
