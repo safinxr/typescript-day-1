@@ -53,46 +53,53 @@
 
   type GenericArray<T> = Array<T>;
 
-
-  const array : GenericArray<number> = [34, 4, 4, 4]
+  const array: GenericArray<number> = [34, 4, 4, 4];
 
   const student: GenericArray<{
-    name:string;
-    roll:number;
-  }> =[
+    name: string;
+    roll: number;
+  }> = [
     {
-        name:"alu",
-        roll: 4
+      name: "alu",
+      roll: 4,
     },
     {
-        name: 'jaja',
-        roll: 343
+      name: "jaja",
+      roll: 343,
     },
-  ]
+  ];
 
+  // genetic type function
 
-// genetic type function
+  const hudai = <T>(param: T): T[] => {
+    return [param];
+  };
 
-const hudai =<T> (param:T):T[] =>{
-  return [param]
-}
+  const rabbit = hudai<number>(34);
 
+  const lala = <T, X>(param1: T, param2: X): [T, X] => {
+    return [param1, param2];
+  };
 
-const rabbit = hudai<number>(34)
+  // extends
 
+const zp = <T extends {a:number}>(param: T) => {
+    return param;
+  };
 
-const lala = <T, X>(param1:T, param2:X):[T, X] =>{
-  return [param1, param2]
-}
-
-
-
-
-
-
-
-
-
+  type Cc ={
+    a:number;
+    b:string,
+    c:boolean
+  }
+  type Tf = {
+    a: number;
+    y: number;
+    b: string;
+    c: boolean;
+  };
+const tt = zp <Cc>({a:1, b:"2", c:true})
+const tat = zp <Tf>({y:1, b:"2", c:true, a:4})
 
 
 
