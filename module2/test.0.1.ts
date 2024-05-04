@@ -154,5 +154,35 @@
 
  getTodo();
 
+
+// conditional type 
+
+type sheikh = {
+  car:string;
+  bot:string;
+  bike:string;
+}
+
+
+
+
+type chacker <T> = T extends keyof sheikh? true:false;
+
+type newt = chacker<"car">;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //
+
 }
