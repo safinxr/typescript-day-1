@@ -81,7 +81,7 @@
     return [param1, param2];
   };
 
-  // extends
+  // constraint extends
 
 const zp = <T extends {a:number}>(param: T) => {
     return param;
@@ -100,6 +100,33 @@ const zp = <T extends {a:number}>(param: T) => {
   };
 const tt = zp <Cc>({a:1, b:"2", c:true})
 const tat = zp <Tf>({y:1, b:"2", c:true, a:4})
+
+
+// genetic constraint with keyof operator
+
+const xp = {
+  name :"Safin",
+  age:40
+}
+
+const search = <T, x extends keyof T>(obj:T, str:x) =>{
+  return obj[str]
+}
+
+
+
+
+console.log(search(xp, "name"));
+
+
+
+
+
+
+
+
+
+
 
 
 
