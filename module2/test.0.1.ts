@@ -172,6 +172,108 @@ type newt = chacker<"car">;
 
 
 
+// meped type
+
+
+
+type Area = {
+  hight:number;
+  width:number;
+}
+
+
+type StringArea = {
+  [key in  keyof Area]: string
+}
+
+
+const area:StringArea = {
+  hight: 'aa',
+  width:'ss'
+}
+
+// utility types
+// Pick
+
+type parson = {
+  name: string;
+  age:number;
+  email?:string;
+  phone:number;
+}
+
+type name = Pick<parson, "name" | "age">
+
+
+const alu:name = {
+  name:'alu',
+  age:34
+}
+
+// Omit
+
+type newParson = Omit<parson, "name" | "age">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
