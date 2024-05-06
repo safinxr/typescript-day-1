@@ -214,8 +214,15 @@ const alu:name = {
 
 type newParson = Omit<parson, "name" | "age">
 
+// -----------
+
+type MyObj = Record <string, number | string>
 
 
+const myObj: MyObj = {
+  yo:4,
+  lo:"aa"
+}
 
 
 
