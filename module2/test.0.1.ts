@@ -193,6 +193,8 @@ const area:StringArea = {
 }
 
 // utility types
+// Required
+// Partial
 // Pick
 
 type parson = {
