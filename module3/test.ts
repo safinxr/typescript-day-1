@@ -43,8 +43,13 @@
  }
 
  const darkDog = new Beast("Dark pochi", "male", "vaw vaw", "black");
+ const darkCat = new Beast("Dark Cat", "male", "Maw Maw", "black");
 
  darkDog.makeSound(100)
+ darkCat.makeSound(100)
+
+
+ 
 
 
 
