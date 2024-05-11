@@ -48,3 +48,83 @@ const obj: AB = {
 
 In this example, AB is an intersection type combining the types of A and B. This enables obj to have both  age and name properties.
 
+
+
+
+# How to handle asynchronous operations using async/await over callback/promise TypeScript.
+
+Using async/await in TypeScript is a cleaner and more readable way to handle asynchronous operations compared to callbacks or raw promises. Here's a basic guide on how to handle asynchronous operations using async/await in TypeScript:
+
+#### Define an Async Function:
+
+Start by defining an async function. This function will contain the asynchronous operations you want to perform.
+
+```typescript
+async function fetchData() {
+    // Asynchronous operations will go here
+}
+```
+#### Await Promises:
+
+Inside the async function, you can await promises using the await keyword. This allows you to pause the execution of the function until the promise is resolved or rejected.
+
+```typescript
+async function fetchData() {
+    const data = await fetchDataFromServer(); // Assuming fetchDataFromServer returns a Promise
+    console.log(data);
+}
+```
+#### Handle Errors:
+
+You can use try-catch blocks to handle errors that might occur during asynchronous operations.
+
+```typescript
+async function fetchData() {
+    try {
+        const data = await fetchDataFromServer(); // Assuming fetchDataFromServer returns a Promise
+        console.log(data);
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+}
+```
+#### Async Function Invocation:
+
+To call an async function, you can use the await keyword if you're inside another async function, or use .then() and .catch() if you're not.
+
+```typescript
+// Inside another async function
+async function main() {
+    await fetchData();
+}
+
+// Outside an async function
+fetchData().then(() => {
+    console.log('Data fetched successfully');
+}).catch((error) => {
+    console.error('An error occurred:', error);
+});
+```
+#### Async/Await with Promise.all:
+
+If you need to perform multiple asynchronous operations concurrently, you can use Promise.all along with async/await.
+
+
+```typescript
+async function fetchMultipleData() {
+    try {
+        const [data1, data2] = await Promise.all([
+            fetchDataFromServer1(),
+            fetchDataFromServer2()
+        ]);
+        console.log('Data 1:', data1);
+        console.log('Data 2:', data2);
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+}
+```
+
+By following these steps, you can effectively handle asynchronous operations using async/await in TypeScript, making your code more readable and maintainable.
+
+
